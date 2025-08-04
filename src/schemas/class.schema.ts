@@ -1,11 +1,8 @@
 import z from "zod";
 
-export const MentorSchema = z.object({
+export const ClassSchema = z.object({
   id: z.number().optional(),
-  mentorName: z.string(),
-  mentorPhone: z.bigint(),
-  class: z.number(),
-  profileId: z.number(),
+  standard: z.number(),
   createdAt: z.date().optional(),
   updatedAt: z.date().optional(),
   createdBy: z.string().optional(),

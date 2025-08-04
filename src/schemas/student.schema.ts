@@ -1,6 +1,13 @@
-import {z} from 'zod'
-export const studentSchema = z.object({
+import z from "zod";
+
+export const StudentSchema = z.object({
+  id: z.number().optional(),
   studentName: z.string(),
-  class: z.number().min(1),
-  mentorId: z.number().optional()
+  class: z.number(),
+  profileId: z.number(),
+  mentorId: z.number().nullable().optional(),
+  createdAt: z.date().optional(),
+  updatedAt: z.date().optional(),
+  createdBy: z.string().optional(),
+  updatedBy: z.string().optional(),
 });
